@@ -9,12 +9,10 @@
 int print_format(char format, va_list args)
 {
 	int count = 0;
-	char *str;
-	char c;
+	char *str, c;
 
 	if (format == '\0')
 	{
-
 	}
 	if (format == '%')
 	{
@@ -32,6 +30,11 @@ int print_format(char format, va_list args)
 		str = va_arg(args, char *);
 		write(1, str, str_len(str));
 		count += str_len(str);
+	}
+	else
+	{
+		write(1, &format, 1);
+		count++;
 	}
 	return (count);
 }
