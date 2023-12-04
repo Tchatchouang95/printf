@@ -5,4 +5,5 @@
 #include <unistd.h>
 int str_len(char *s);
 int _printf(const char *format, ...);
+int print_format(char format, va_list args)
 #endif
