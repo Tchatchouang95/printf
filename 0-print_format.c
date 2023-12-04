@@ -11,9 +11,6 @@ int print_format(char format, va_list args)
 	int count = 0;
 	char *str, c;
 
-	if (format == '\0')
-	{
-	}
 	if (format == '%')
 	{
 		write(1, &format, 1);
@@ -30,11 +27,6 @@ int print_format(char format, va_list args)
 		str = va_arg(args, char *);
 		write(1, str, str_len(str));
 		count += str_len(str);
-	}
-	else
-	{
-		write(1, &format, 1);
-		count++;
 	}
 	return (count);
 }
