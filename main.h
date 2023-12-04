@@ -3,5 +3,6 @@
 
 #include <stdarg.h>
 #include <unistd.h>
+int str_len(char *s);
 int _printf(const char *format, ...);
 #endif
