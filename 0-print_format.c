@@ -25,8 +25,6 @@ int print_format(char format, va_list args)
 	else if (format == 's')
 	{
 		str = va_arg(args, char *);
-		if (str == NULL)
-			return ("(nil)");
 		write(1, str, str_len(str));
 		count += str_len(str);
 	}
