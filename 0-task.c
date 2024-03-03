@@ -2,7 +2,9 @@
 
 /**
  * _printf - Produces output according to a format
+ *
  * @format: format string
+ *
  * Return: length of format string
  */
 int _printf(const char *format, ...)
